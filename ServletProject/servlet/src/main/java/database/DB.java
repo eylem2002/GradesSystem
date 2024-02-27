@@ -7,7 +7,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 public class DB {
     private final String HOST = "jdbc:mysql://localhost:3306/StudentGrades";
- //  private   final String HOST = "jdbc:mysql://localhost:3306/School?allowPublicKeyRetrieval=true&useSSL=false";
 
     private final String DATABASE_USER = "root";
     private final String DATABASE_PASSWORD = "12345678";
