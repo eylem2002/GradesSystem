@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title> Home Page </title>
+  <style>
+
+    body {
+      text-align: center;
+    }
+
+    h1 {
+
+      color: Thistle;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+
+      color: Thistle;
+
+
+    }
+    #container {
+      margin-top: 40px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    #container > a {
+      text-align: center;
+      border-radius: 16px;
+      text-decoration: none;
+      background-color: Thistle;
+      color: black;
+      width: auto;
+      height: auto;
+      margin: 12px;
+      padding: 16px;
+    }
+    h3 {
+      margin: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<h1> Welcome Student </h1>
+
+<h3 style="text-align:center;" > Choose The service you want : </h3>
+<div id = "container">
+  <a th:href="@{'/student/' + ${id} + '/marks' }" > All Marks </a>
+  <a th:href="@{'/student/' + ${id} + '/mark' }" > Single Mark </a>
+  <a th:href="@{'/student/' + ${id} + '/min' }"> Min Mark </a>
+  <a th:href="@{'/student/' + ${id} + '/median' }"> Median Mark </a>
+  <a th:href="@{'/student/' + ${id} + '/average' }" > Average Mark</a>
+  <a th:href="@{'/student/' + ${id} + '/max' }" > Max Mark </a>
+
+  <a href="/logout" id="logout">Logout</a>
+</div>
+</body>
+</html>

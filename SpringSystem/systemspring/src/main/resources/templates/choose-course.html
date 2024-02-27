@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Course</title>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: Thistle;
+      margin-top: 40px;
+
+    }
+
+    #something {
+      margin-top: 100px;
+
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+    }
+
+    form {
+      background-color: Thistle;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+
+  </style>
+</head>
+<body>
+<h1>Choose Course</h1>
+
+<div id="something">
+  <form action="#" th:action="@{/student/__${id}__/__${route}__}" th:object="${mark}" method="post">
+
+    <label for="course"> Choose Course </label>
+    <select th:field="*{name}" name="course" id="course">
+      <option value="arabic"> Arabic </option>
+      <option value="english"> English </option>
+      <option value="spanish"> Spanish </option>
+    </select>
+    <p>
+      <input type="submit" value="Submit" />
+    </p>
+  </form>
+</div>
+
+</body>
+</html>

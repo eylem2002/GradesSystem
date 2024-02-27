@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 50px;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 30px auto;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: Thistle;
+      color: black;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ddd;
+    }
+
+
+  </style>
+</head>
+<body>
+<h1>Student Marks</h1>
+<table>
+  <thead>
+  <tr>
+    <th> Course </th>
+    <th> Marks </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="mark : ${courses}">
+    <td th:text="${mark.name}"></td>
+    <td th:text="${mark.mark}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

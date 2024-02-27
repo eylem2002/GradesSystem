@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Login Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 40px;
+    }
+    form {
+      margin: 30px auto;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="number"], input[type="password"] {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      border-radius: 15px;
+      text-decoration: none;
+
+      background-color: Thistle;
+      width: 130px;
+      text-align: center;
+      height: auto;
+      margin: 10px;
+      padding: 15px;
+    }
+    input[type="reset"] {
+      border-radius: 15px;
+      text-decoration: none;
+
+      background-color: Thistle;
+      width: auto;
+      text-align:center;
+      height: auto;
+      margin: 10px;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+<h1 style = "color: Thistle" >Login Page</h1>
+<form action="#" th:action="@{/login}" th:object="${student}" method="post">
+  <p style = "color: Thistle">
+    ID:
+    <input th:field="*{id}" autocomplete="off" placeholder="id" type="number">
+  </p>
+  <p style = "color: Thistle">
+    Password:
+    <input th:field="*{password}" autocomplete="off" placeholder="password" type="password">
+  </p>
+
+  <p>
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+  </p>
+</form>
+</body>
+</html>
